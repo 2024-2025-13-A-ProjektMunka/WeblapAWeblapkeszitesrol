@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="/css/stilus.css" />
+        <title>Weblap a weblapkészítésről</title>
+    </head>
+    <body>
+        <%- include('./nav.ejs') %>
+        <div class="container">
+            <h1 class="text-center p-3">Weblap a weblapkészítésről</h1>
+            <h3 class="py-2">Első lépés - Feladat megbeszélése</h3>
+            <ul class="list-group">
+                <li class="list-group-item fw-bold">
+                    Ötletelés - Mi legyen a projekt témája?
+                </li>
+                <li class="list-group-item fw-bold">
+                    Csapatmunka megszervezése, feladatok kiosztása
+                </li>
+                <li class="list-group-item fw-bold">
+                    Fejlesztői eszközök kiválasztása
+                    <ul class="list-group">
+                        <li class="list-group-item fw-normal">
+                            Visual Studio Code
+                        </li>
+                        <li class="list-group-item fw-normal">GitHub</li>
+                        <li class="list-group-item fw-normal">
+                            MongoDb Atlas és/vagy MongoDb Compass
+                        </li>
+                        <li class="list-group-item fw-normal">
+                            Cloudinary stb.
+                        </li>
+                    </ul>
+                </li>
+                <li class="list-group-item">
+                    Előzetes tervek készítése - <b>Figma</b>
+                </li>
+                <li class="list-group-item">
+                    Programozói eszközök kiválasztása - <b>MERN</b>
+                </li>
+            </ul>
+            <h3 class="py-2">Második lépés - Projekt kezdeti beállításai</h3>
+            <ul class="list-group">
+                <li class="list-group-item fw-bold">
+                    GitHub repository létrehozása
+                    <span class="kiemel">Cinema</span> néven
+                    <br />
+                    <img src="/images/kep_001.png" alt="kep_001" />
+                </li>
+                <li class="list-group-item fw-bold">
+                    Visual Studio Code-ban projekt létrehozása a repository
+                    URL-jének a felhasználásával
+                    <br />
+                    <img src="/images/kep_002.png" alt="kep_002" />
+                    <br />
+                    Legördülő lista megnyitása: <kbd>ctrl + shift + p</kbd>
+                    <br />
+                    <span class="kiemel">Git: Clone</span> kiválasztása
+                    <br />
+                    <img src="/images/kep_003.png" alt="kep_003" />
+                </li>
+                <li class="list-group-item fw-bold">
+                    Git Bash felület megnyitása: <kbd>ctrl + j</kbd>
+                </li>
+                <li class="list-group-item">
+                    <span class="kiemel">node</span> szerverkörnyezet
+                    aktiválása:
+                    <kbd>npm init -y</kbd>
+                </li>
+                <li class="list-group-item">
+                    <span class="kiemel">frontend</span> mappa létrehozása:
+                    <kbd>npm create vite@latest</kbd>
+                </li>
+                <li class="list-group-item">
+                    Szükséges állományok létrehozása:
+                    <kbd>touch server.js .gitignore .env</kbd>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="kiemel">server.js</span> - szerver
+                            kezelésére szolgáló állomány
+                        </li>
+                        <li class="list-group-item">
+                            <span class="kiemel">.gitignore</span> - GitHub-ra
+                            fel nem töltött állományok és mappák gyűjtőhelye
+                        </li>
+                        <li class="list-group-item">
+                            <span class="kiemel">.env</span> - környezeti
+                            változók (<span class="kiemel">process.env</span>
+                            kezelése: jelszavak, URL-ek stb.)
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <h3 class="py-2">Harmadik lépés - MongoDb adatbázis beállítása</h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <span class="kiemel">MongoDb</span> projekt létrehozása
+                    <span class="kiemel">Cinema</span>
+                    néven. A <span class="kiemel">cluster</span> neve legyen
+                    <span class="kiemel">Mozi</span>.
+                    <br />
+                    <img src="/images/kep_004.png" alt="kep_004" />
+                    <br />
+                    <br />
+                    <img src="/images/kep_005.png" alt="kep_005" />
+                    <br />
+                    Lehetséges tagok meghívása. Kihagyható.
+                    <br />
+                    <img src="/images/kep_006.png" alt="kep_006" />
+                    <br />
+                    <br />
+                    <img src="/images/kep_007.png" alt="kep_007" />
+                    <br />
+                    <br />
+                    <img src="/images/kep_008.png" alt="kep_008" />
+                    <br />
+                    <br />
+                    <img src="/images/kep_009.png" alt="kep_009" />
+                    <br />
+                    <br />
+                    <img src="/images/kep_010.png" alt="kep_010" />
+                    <br />
+                    <br />
+                    <img src="/images/kep_011.png" alt="kep_011" />
+                    <br />
+                    <br />
+                    <img src="/images/kep_012.png" alt="kep_012" />
+                    <br />
+                    <br />
+                    <img src="/images/kep_013.png" alt="kep_013" />
+                </li>
+                <li class="list-group-item">
+                    Adatbázis csatlakozásához szükséges URL kinyerése:
+                    <br />
+                    <img src="/images/kep_014.png" alt="kep_014" />
+                </li>
+                <li class="list-group-item">
+                    Adatbázis beállítása:
+                    <br />
+                    <img src="/images/kep_015.png" alt="kep_015" />
+                    <br />
+                    <br />
+                    <img src="/images/kep_016.png" alt="kep_016" />
+                    <br />
+                    <br />
+                    <img src="/images/kep_017.png" alt="kep_017" />
+                    <br />
+                    <br />
+                    <img src="/images/kep_018.png" alt="kep_018" />
+                </li>
+                <li class="list-group-item">
+                    Adatbázis létrehozása
+                    <span class="kiemel">filmek</span> néven. Első gyűjtemény
+                    (<span class="kiemel">collection</span>) beállítása
+                    <span class="kiemel">films</span> néven.
+                    <br />
+                    <img src="/images/kep_019.png" alt="kep_019" />
+                    <br />
+                    <br />
+                    <img src="/images/kep_020.png" alt="kep_020" />
+                    <br />
+                    <br />
+                    <img src="/images/kep_021.png" alt="kep_021" />
+                    <br />
+                    Vissza a nyitólapra.
+                    <br />
+                    <img src="/images/kep_022.png" alt="kep_022" />
+                </li>
+            </ul>
+            <h3 class="py-2">
+                Negyedik lépés - Node.js környezet szerkesztése
+            </h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    A szerveroldali első <span class="kiemel">npm</span>
+                    csomagok:
+                    <kbd>npm install cors dotenv ejs express mongoose</kbd>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="kiemel">cors</span> - backend és
+                            frontend összekötése
+                        </li>
+                        <li class="list-group-item">
+                            <span class="kiemel">dotenv</span> - (<span
+                                class="kiemel"
+                                >.env</span
+                            >) állomány szerkesztéséhez
+                        </li>
+                        <li class="list-group-item">
+                            <span class="kiemel">ejs</span> - megjelenítő motor
+                            (<span class="kiemel">view engine</span>) beállítása
+                        </li>
+                        <li class="list-group-item">
+                            <span class="kiemel">express</span> - szerver
+                            szerkesztéséhez
+                        </li>
+                        <li class="list-group-item">
+                            <span class="kiemel">mongoose</span> - adatbázis
+                            kezeléséhez
+                        </li>
+                    </ul>
+                </li>
+                <li class="list-group-item">
+                    Szervert automatikusan frissítő
+                    <span class="kiemel">devDependency npm</span>
+                    csomag:
+                    <kbd>npm install -D nodemon</kbd>
+                </li>
+                <li class="list-group-item">
+                    A létrejött
+                    <span class="kiemel">package.json</span> szerkesztése
+                    <br />
+                    <img src="/images/kep_023.png" alt="kep_023" />
+                </li>
+                <li class="list-group-item">
+                    <span class="kiemel">.gitignore</span> szerkesztése
+                    <br />
+                    <img src="/images/kep_024.png" alt="kep_024" />
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

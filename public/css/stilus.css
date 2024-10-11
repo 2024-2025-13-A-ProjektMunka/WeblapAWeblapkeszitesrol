@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav {
+    background-color: dodgerblue;
+    list-style-type: none;
+}
+
+nav li {
+    display: inline;
+}
+
+nav li a {
+    color: whitesmoke;
+    display: inline-block;
+    padding: 1em;
+    text-decoration: none;
+}
+
+.kiemel {
+    color: red;
+}
+
+.list-group .list-group-item:nth-child(odd) {
+    background-color: burlywood;
+}
+
+.list-group .list-group-item:nth-child(even) {
+    background-color: rgb(193, 255, 136);
+}
