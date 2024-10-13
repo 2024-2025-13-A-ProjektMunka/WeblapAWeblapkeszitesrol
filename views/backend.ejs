@@ -2,7 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
             rel="stylesheet"
@@ -14,7 +17,10 @@
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"
         ></script>
-        <link rel="stylesheet" href="/css/stilus.css" />
+        <link
+            rel="stylesheet"
+            href="/css/stilus.css"
+        />
         <title>Weblap a weblapkészítésről</title>
     </head>
     <body>
@@ -32,7 +38,10 @@
                         views</kbd
                     >
                     <br />
-                    <img src="/images/kep_025.png" alt="kep_025" />
+                    <img
+                        src="/images/kep_025.png"
+                        alt="kep_025"
+                    />
                     <br />
                     <br />
                     <ul class="list-group">
@@ -76,7 +85,10 @@
                 <li class="list-group-item">
                     <span class="kiemel">.env</span> szerkesztése
                     <br />
-                    <img src="/images/kep_026.png" alt="kep_026" />
+                    <img
+                        src="/images/kep_026.png"
+                        alt="kep_026"
+                    />
                 </li>
             </ul>
             <h3 class="py-2">Második lépés - Adatbázis csatlakozás</h3>
@@ -86,27 +98,396 @@
                     <span class="kiemel">dbConnection.js</span> állomány
                     létrehozása, az adatbázishoz való csatlakozásért.
                     <br />
-                    <img src="/images/kep_027.png" alt="kep_027" />
+                    <img
+                        src="/images/kep_027.png"
+                        alt="kep_027"
+                    />
                 </li>
                 <li class="list-group-item">
                     A <span class="kiemel">server.js</span> mappa első
                     szerkesztése
                     <br />
-                    <img src="/images/kep_028.png" alt="kep_028" />
+                    <img
+                        src="/images/kep_028.png"
+                        alt="kep_028"
+                    />
                 </li>
                 <li class="list-group-item">
                     Az alapmappában adjuk ki a következő utasítást:
                     <kbd>npm run dev</kbd>
                     <br />
-                    <img src="/images/kep_029.png" alt="kep_029" />
+                    <img
+                        src="/images/kep_029.png"
+                        alt="kep_029"
+                    />
                     <br />
                     <br />
                     <kbd>ctrl + http://localhost:3500/api/cinema</kbd> lenyomása
                     után:
                     <br />
-                    <img src="/images/kep_030.png" alt="kep_030" />
+                    <br />
+                    <img
+                        src="/images/kep_030.png"
+                        alt="kep_030"
+                    />
                 </li>
             </ul>
+            <h3 class="py-2">Harmadik lépés - Main route kezelése</h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    A <span class="kiemel">controllers</span> mappában hozzuk
+                    létre a
+                    <span class="kiemel">mainRouteControllers.js</span> nevű
+                    állományt és szerkesszük
+                    <br />
+                    <img
+                        src="/images/kep_031.png"
+                        alt="kep_031"
+                    />
+                </li>
+                <li class="list-group-item">
+                    Ezt használjuk fel a
+                    <span class="kiemel">routes</span> mappában létrehozandó
+                    <span class="kiemel">mainRoutes.js</span> állományban
+                    <br />
+                    <img
+                        src="/images/kep_032.png"
+                        alt="kep_032"
+                    />
+                </li>
+                <li class="list-group-item">
+                    Majd ezt a
+                    <span class="kiemel">server.js</span> állományban
+                    <br />
+                    <img
+                        src="/images/kep_033.png"
+                        alt="kep_033"
+                    />
+                </li>
+                <li class="list-group-item">
+                    Az
+                    <span class="kiemel">index.ejs</span> állomány a
+                    <span class="kiemel">views</span> mappában található. A
+                    <span class="kiemel">bootstrap 5</span>-t a
+                    <a href="https://getbootstrap.com/">hivatalos honlapról</a>
+                    vegyük
+                    <br />
+                    <img
+                        src="/images/kep_034.png"
+                        alt="kep_034"
+                    />
+                </li>
+                <li class="list-group-item">
+                    A
+                    <span class="kiemel">nav.ejs</span> állomány szintén a
+                    <span class="kiemel">views</span> mappában található
+                    <br />
+                    <img
+                        src="/images/kep_035.png"
+                        alt="kep_035"
+                    />
+                </li>
+                <li class="list-group-item">
+                    Ahhoz, hogy az oldal működjön szerkeszteni kell a
+                    <span class="kiemel">server.js</span> állományt. Be kell
+                    állítani a megjelenítő motort (<span class="kiemel"
+                        >view engine</span
+                    >) és a statikus mappa elérhetőségét
+                    <br />
+                    <img
+                        src="/images/kep_036.png"
+                        alt="kep_036"
+                    />
+                </li>
+                <li class="list-group-item">
+                    Az oldal stílusát a
+                    <span class="kiemel">public/css/stilus.css</span>
+                    állományban adjuk meg
+                    <br />
+                    <img
+                        src="/images/kep_037.png"
+                        alt="kep_037"
+                    />
+                </li>
+                <li class="list-group-item">
+                    Az eredmény pedig
+                    <br />
+                    <img
+                        src="/images/kep_038.png"
+                        alt="kep_038"
+                    />
+                </li>
+            </ul>
+            <h3 class="py-2">Negyedik lépés - Filmek route kezelése</h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    Készítsük el a
+                    <span class="kiemel">Filmek</span> route-ot kezelő
+                    állományokat. Először a
+                    <span class="kiemel">filmekRouteControllers.js</span>
+                    állományt a <span class="kiemel">controllers</span> mappában
+                    <br />
+                    <img
+                        src="/images/kep_039.png"
+                        alt="kep_039"
+                    />
+                </li>
+                <li class="list-group-item">
+                    Ehhez szükségünk van a
+                    <span class="kiemel">Film.js</span> állományra a
+                    <span class="kiemel">models</span> mappában. Ebben
+                    definiáljuk a <span class="kiemel">MongoDb</span>-ben
+                    használt modellünket
+                    <br />
+                    <img
+                        src="/images/kep_040.png"
+                        alt="kep_040"
+                    />
+                </li>
+                <li class="list-group-item">
+                    Következő lépés a
+                    <span class="kiemel">filmekRoutes.js</span> állomány
+                    létrehozása a <span class="kiemel">routes</span> mappában
+                    <br />
+                    <img
+                        src="/images/kep_041.png"
+                        alt="kep_041"
+                    />
+                </li>
+                <li class="list-group-item">
+                    Következő lépés a
+                    <span class="kiemel">filmek.ejs</span> állomány létrehozása
+                    a <span class="kiemel">views</span> mappában
+                    <br />
+                    <img
+                        src="/images/kep_043.png"
+                        alt="kep_043"
+                    />
+                    <br />
+                    <br />
+                    <img
+                        src="/images/kep_044.png"
+                        alt="kep_044"
+                    />
+                </li>
+                <li class="list-group-item">
+                    Végül ismét a
+                    <span class="kiemel">server.js</span> állomány
+                    <br />
+                    <img
+                        src="/images/kep_042.png"
+                        alt="kep_042"
+                    />
+                </li>
+                <li class="list-group-item">
+                    Manuálisan töltsük fel az első értéket az adatbázisba
+                    <br />
+                    <img
+                        src="/images/kep_046.png"
+                        alt="kep_046"
+                    />
+                </li>
+                <li class="list-group-item">
+                    Futtatás után
+                    <br />
+                    <img
+                        src="/images/kep_045.png"
+                        alt="kep_045"
+                    />
+                </li>
+            </ul>
+            <h3 class="py-2">Ötödik lépés - UjFilm route kezelése</h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    Készítsük el az
+                    <span class="kiemel">UjFilm</span> route-ot kezelő
+                    állományokat. Először a
+                    <span class="kiemel">ujfFilmRouteControllers.js</span>
+                    állományt a <span class="kiemel">controllers</span> mappában
+                    <br />
+                    <img
+                        src="/images/kep_047.png"
+                        alt="kep_047"
+                    />
+                </li>
+                <li class="list-group-item">
+                    Következő lépés az
+                    <span class="kiemel">ujFilmRoutes.js</span> állomány
+                    létrehozása a <span class="kiemel">routes</span> mappában
+                    <br />
+                    <img
+                        src="/images/kep_048.png"
+                        alt="kep_048"
+                    />
+                </li>
+                <li class="list-group-item">
+                    Következő lépés az
+                    <span class="kiemel">ujFilm.ejs</span> állomány létrehozása
+                    a <span class="kiemel">views</span> mappában
+                    <br />
+                    <img
+                        src="/images/kep_049.png"
+                        alt="kep_049"
+                    />
+                    <br />
+                    <br />
+                    <img
+                        src="/images/kep_050.png"
+                        alt="kep_050"
+                    />
+                </li>
+                <li class="list-group-item">
+                    Az űrlap által felvett adatok feldolgozásához szükséges
+                    logika a <span class="kiemel">/js/feladat.js</span> statikus
+                    állományban található
+                    <br />
+                    <img
+                        src="/images/kep_053.png"
+                        alt="kep_053"
+                    />
+                </li>
+                <li class="list-group-item">
+                    Végül ismét a
+                    <span class="kiemel">server.js</span> állomány. A két plusz
+                    sor felel azért, hogy a szerver feltudja dolgozni a json
+                    formátumban kapott adatokat
+                    <br />
+                    <img
+                        src="/images/kep_051.png"
+                        alt="kep_051"
+                    />
+                </li>
+                <li class="list-group-item">
+                    Töltsünk fel egy újabb értéket az adatbázisba
+                    <br />
+                    <img
+                        src="/images/kep_052.png"
+                        alt="kep_052"
+                    />
+                </li>
+                <li class="list-group-item">
+                    A böngészőben ezt fogjuk látni
+                    <br />
+                    <img
+                        src="/images/kep_054.png"
+                        alt="kep_054"
+                    />
+                </li>
+            </ul>
+            <h3 class="py-2">Hatodik lépés - EgyediFilm route kezelése</h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    Készítsük el az
+                    <span class="kiemel">EgyediFilm</span> route-ot kezelő
+                    állományokat. Először a
+                    <span class="kiemel">egyediFilmRouteControllers.js</span>
+                    állományt a <span class="kiemel">controllers</span> mappában
+                    <br />
+                    <img
+                        src="/images/kep_055.png"
+                        alt="kep_055"
+                    />
+                </li>
+                <li class="list-group-item">
+                    Következő lépés az
+                    <span class="kiemel">egyediFilmRoutes.js</span> állomány
+                    létrehozása a <span class="kiemel">routes</span> mappában
+                    <br />
+                    <img
+                        src="/images/kep_056.png"
+                        alt="kep_056"
+                    />
+                </li>
+                <li class="list-group-item">
+                    Következő lépés az
+                    <span class="kiemel">egyediFilm.ejs</span> állomány
+                    létrehozása a <span class="kiemel">views</span> mappában
+                    <br />
+                    <img
+                        src="/images/kep_057.png"
+                        alt="kep_057"
+                    />
+                    <br />
+                    <br />
+                    <img
+                        src="/images/kep_058.png"
+                        alt="kep_058"
+                    />
+                </li>
+                <li class="list-group-item">
+                    Készítsük el az
+                    <span class="kiemel">EgyediFilmModosit</span> route-ot
+                    kezelő állományokat. Először a
+                    <span class="kiemel"
+                        >egyediFilmModositRouteControllers.js</span
+                    >
+                    állományt a <span class="kiemel">controllers</span> mappában
+                    <br />
+                    <img
+                        src="/images/kep_059.png"
+                        alt="kep_059"
+                    />
+                </li>
+                <li class="list-group-item">
+                    Következő lépés az
+                    <span class="kiemel">egyediFilmModositRoutes.js</span>
+                    állomány létrehozása a
+                    <span class="kiemel">routes</span> mappában
+                    <br />
+                    <img
+                        src="/images/kep_060.png"
+                        alt="kep_060"
+                    />
+                </li>
+                <li class="list-group-item">
+                    Következő lépés az
+                    <span class="kiemel">egyediFilmModosit.ejs</span> állomány
+                    létrehozása a <span class="kiemel">views</span> mappában
+                    <br />
+                    <img
+                        src="/images/kep_061.png"
+                        alt="kep_061"
+                    />
+                    <br />
+                    <br />
+                    <img
+                        src="/images/kep_062.png"
+                        alt="kep_062"
+                    />
+                    <br />
+                    <br />
+                    <img
+                        src="/images/kep_063.png"
+                        alt="kep_063"
+                    />
+                </li>
+                <li class="list-group-item">
+                    Végül ismét a
+                    <span class="kiemel">server.js</span> állomány
+                    <br />
+                    <img
+                        src="/images/kep_064.png"
+                        alt="kep_064"
+                    />
+                </li>
+                <li class="list-group-item">
+                    Egy film szerkesztése
+                    <br />
+                    <img
+                        src="/images/kep_065.png"
+                        alt="kep_065"
+                    />
+                </li>
+                <li class="list-group-item">
+                    Egy film módosítása
+                    <br />
+                    <img
+                        src="/images/kep_066.png"
+                        alt="kep_066"
+                    />
+                </li>
+            </ul>
+            <h3 class="py-2">Hetedik lépés - Nezo route kezelése</h3>
         </div>
     </body>
 </html>
